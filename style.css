@@ -1,0 +1,58 @@
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* mobile first */
+  gap: 0.5rem;
+}
+
+nav a, #contact-btn {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: #000;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  color: #333;
+  min-width: 200px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.dropdown-content p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Clase que muestra el dropdown */
+.show {
+  display: block !important;
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  nav a, #contact-btn {
+    width: auto;
+    text-align: center;
+  }
+}
